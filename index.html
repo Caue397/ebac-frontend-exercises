@@ -5,88 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cauê Gallizzi - Desenvolvedor Fullstack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./build/main.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-left">
-                <div class="branding">
-                    <img src="./build/images/hands-gc143a78ba_1920.png" width="70" height="70" />
-                </div>
-                <nav>
-                    <ul class="menu">
-                        <li>
-                            <a href="#">Início</a>
-                        </li>
-                        <li>
-                            <a href="#">Produtos</a>
-                        </li>
-                    </ul>
-                </nav>
+    <main class="profile-container">
+        <div class="profile-card">
+
+            <div class="profile-photo">
+                <img src="https://placehold.co/110x110/d5d5d5/666666?text=CG" alt="Cauê Gallizzi" width="110" height="110" />
             </div>
-            <div class="header-right">
-                <a href="#" class="header-cta">Entrar</a>
-                <button class="menu-toggle" aria-expanded="false">☰ Menu</button>
+
+            <h1 class="profile-name">Cauê Gallizzi</h1>
+            <p class="profile-title">Desenvolvedor Fullstack</p>
+
+            <p class="profile-description">
+                Desenvolvedor Fullstack com experiência em Next.js, Nest.js e Java com Spring Boot,
+                criando aplicações modernas, escaláveis e de alta performance.
+            </p>
+
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
+
+            <div class="projects">
+                <a href="#" class="project-link">Gerenciador de Projetos</a>
+                <a href="#" class="project-link">Audioscribe</a>
+            </div>
+
         </div>
-    </header>
-    <section>
-        <div class="container">
-            <h2>Produtos</h2>
-            <input type="text" class="products-search" placeholder="Buscar produto..." />
-            <ul class="products">
-                <li class="product-item">
-                    <img src="./build/images/bird-ga5d9ed257_1920.jpg" alt="Pássaro" width="300" height="200" />
-                    <h4>Pássaro</h4>
-                    <p>
-                        Fotografia de um pássaro exótico em ambiente natural.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="./build/images/birds-g6b63afc7a_1920.jpg" alt="Pássaros" width="300" height="200" />
-                    <h4>Pássaros</h4>
-                    <p>
-                        Conjunto de pássaros em voo sobre o horizonte.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="./build/images/butterfly-g7f3546b64_1920.jpg" alt="Borboleta" width="300" height="200" />
-                    <h4>Borboleta</h4>
-                    <p>
-                        Borboleta colorida pousada em flor silvestre.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="./build/images/street-gddeece843_1920.jpg" alt="Rua" width="300" height="200" />
-                    <h4>Rua</h4>
-                    <p>
-                        Fotografia urbana de uma rua iluminada à noite.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <script src="./build/scripts/menu.js"></script>
-    <script src="./build/scripts/products.js"></script>
-    <script src="./build/scripts/main.js"></script>
+    </main>
 </body>
 
 </html>
