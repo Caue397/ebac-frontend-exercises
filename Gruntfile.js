@@ -1,3 +1,5 @@
+const sass = require('sass');
+
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -6,18 +8,22 @@ module.exports = function (grunt) {
             dist: ['dist/']
         },
 
-        less: {
+        sass: {
+            options: {
+                implementation: sass
+            },
             development: {
                 files: {
-                    'dev/main.css': 'src/main.less'
+                    'dev/main.css': 'src/main.scss'
                 }
             },
             production: {
                 options: {
-                    compress: true
+                    implementation: sass,
+                    outputStyle: 'compressed'
                 },
                 files: {
-                    'dist/main.css': 'src/main.less'
+                    'dist/main.css': 'src/main.scss'
                 }
             }
         },
@@ -86,9 +92,9 @@ module.exports = function (grunt) {
         },
 
         watch: {
-            less: {
-                files: ['src/**/*.less'],
-                tasks: ['less:development']
+            sass: {
+                files: ['src/**/*.scss'],
+                tasks: ['sass:development']
             },
             html: {
                 files: ['src/index.html'],
@@ -98,17 +104,17 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['less:development', 'replace:development']);
-    grunt.registerTask('dev', ['less:development', 'replace:development', 'watch']);
+    grunt.registerTask('default', ['sass:development', 'replace:development']);
+    grunt.registerTask('dev', ['sass:development', 'replace:development', 'watch']);
     grunt.registerTask('production', [
         'clean:dist',
-        'less:production',
+        'sass:production',
         'uglify:production',
         'replace:production',
         'htmlmin:production'

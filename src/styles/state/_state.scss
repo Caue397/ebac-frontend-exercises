@@ -1,0 +1,10 @@
+// State — estados dinâmicos, geralmente aplicados via JavaScript
+// Prefixo "is-" para identificar classes de estado no SMACSS
+
+.is-oculto {
+    display: none;
+}
+
+.is-visivel {
+    display: block;
+}

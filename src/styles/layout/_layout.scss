@@ -1,0 +1,11 @@
+// Layout — estruturas maiores que organizam a página
+// Prefixo "l-" para identificar classes de layout no SMACSS
+
+.l-produtos {
+    max-width: 640px;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 1%;
+}
