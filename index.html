@@ -15,60 +15,67 @@
 <body>
     <header>
         <div class="container">
-            <div class="branding">
-                <img src="https://via.placeholder.com/120x70" />
+            <div class="header-left">
+                <div class="branding">
+                    <img src="./build/images/hands-gc143a78ba_1920.png" width="70" height="70" />
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Início</a>
+                        </li>
+                        <li>
+                            <a href="#">Produtos</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="#">Início</a>
-                    </li>
-                    <li>
-                        <a href="#">Produtos</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="header-right">
+                <a href="#" class="header-cta">Entrar</a>
+                <button class="menu-toggle" aria-expanded="false">☰ Menu</button>
+            </div>
         </div>
     </header>
     <section>
         <div class="container">
             <h2>Produtos</h2>
+            <input type="text" class="products-search" placeholder="Buscar produto..." />
             <ul class="products">
                 <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
+                    <img src="./build/images/bird-ga5d9ed257_1920.jpg" alt="Pássaro" width="300" height="200" />
+                    <h4>Pássaro</h4>
                     <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
+                        Fotografia de um pássaro exótico em ambiente natural.
                     </p>
                     <a href="#" class="product-button">
                         Ver detalhes
                     </a>
                 </li>
                 <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
+                    <img src="./build/images/birds-g6b63afc7a_1920.jpg" alt="Pássaros" width="300" height="200" />
+                    <h4>Pássaros</h4>
                     <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
+                        Conjunto de pássaros em voo sobre o horizonte.
                     </p>
                     <a href="#" class="product-button">
                         Ver detalhes
                     </a>
                 </li>
                 <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
+                    <img src="./build/images/butterfly-g7f3546b64_1920.jpg" alt="Borboleta" width="300" height="200" />
+                    <h4>Borboleta</h4>
                     <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
+                        Borboleta colorida pousada em flor silvestre.
                     </p>
                     <a href="#" class="product-button">
                         Ver detalhes
                     </a>
                 </li>
                 <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
+                    <img src="./build/images/street-gddeece843_1920.jpg" alt="Rua" width="300" height="200" />
+                    <h4>Rua</h4>
                     <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
+                        Fotografia urbana de uma rua iluminada à noite.
                     </p>
                     <a href="#" class="product-button">
                         Ver detalhes
@@ -77,6 +84,9 @@
             </ul>
         </div>
     </section>
+    <script src="./build/scripts/menu.js"></script>
+    <script src="./build/scripts/products.js"></script>
+    <script src="./build/scripts/main.js"></script>
 </body>
 
 </html>

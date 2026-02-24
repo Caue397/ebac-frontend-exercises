@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use './config/reset.scss';
 @use './config/variables.scss';
 
@@ -24,22 +25,73 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-}
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
-header {
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 12px 0;
+  }
+
+  .branding img {
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-cta {
+  background-color: variables.$secundaryColor;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+
+  &:hover {
+    background-color: color.adjust(variables.$secundaryColor, $lightness: 8%);
+    transform: translateY(-1px);
+  }
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: #fff;
+    color: variables.$mainColor;
   }
 }
 
 .menu {
   display: flex;
-}
+  align-items: center;
 
-.menu {
   li {
     font-weight: bold;
     margin-left: 24px;
@@ -47,6 +99,50 @@ header {
     a {
       color: #fff;
       text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, opacity 0.2s;
+
+      &:hover {
+        border-bottom-color: variables.$secundaryColor;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: variables.$mainColor;
+    padding: 16px 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &--open {
+      display: flex;
+    }
+
+    li {
+      margin-left: 0;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
