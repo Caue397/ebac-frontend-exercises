@@ -1,20 +1,52 @@
-import { Computer } from './entity/Computer.js';
-import { Desktop } from './entity/Desktop.js';
-import { Notebook } from './entity/Notebook.js';
+const alunos = [
+  {
+    name: 'João',
+    score: 9
+  },
+  {
+    name: 'Maria',
+    score: 8
+  },
+  {
+    name: 'Pedro',
+    score: 7
+  },
+  {
+    name: 'Ana',
+    score: 10
+  },
+  {
+    name: 'Bruno',
+    score: 6
+  },
+  {
+    name: 'Carla',
+    score: 5
+  },
+  {
+    name: 'Rafael',
+    score: 4
+  },
+  {
+    name: 'Laura',
+    score: 3
+  },
+  {
+    name: 'Gustavo',
+    score: 2
+  },
+  {
+    name: 'Isabela',
+    score: 1
+  },
+  {
+    name: 'Ricardo',
+    score: 0
+  },
+]
 
-const computer = new Computer('Intel Core i5', 'NVIDIA GeForce RTX 3060', '16GB', '512GB', 'ASUS ROG STRIX B550-I GAMING');
-const desktop = new Desktop('Intel Core i5', 'NVIDIA GeForce RTX 3060', '16GB', '512GB', 'ASUS ROG STRIX B550-I GAMING', '500W', '4');
-const notebook = new Notebook('Intel Core i5', 'NVIDIA GeForce RTX 3060', '16GB', '512GB', 'ASUS ROG STRIX B550-I GAMING', '5000mAh');
+function alunosAprovados(alunos) {
+  return alunos.filter((aluno) => aluno.score >= 6);
+};
 
-computer.powerOn();
-desktop.powerOn();
-notebook.powerOn();
-
-notebook.chargeBattery();
-desktop.activateFans();
-
-desktop.deactivateFans();
-
-computer.powerOff();
-desktop.powerOff();
-notebook.powerOff();
+console.log(alunosAprovados(alunos));
